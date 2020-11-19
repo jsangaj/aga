@@ -1,0 +1,7 @@
+{
+  "name": "aga",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

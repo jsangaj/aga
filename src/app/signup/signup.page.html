@@ -1,0 +1,70 @@
+<ion-content class="fullscreen" id="login-page">
+  <div class="login-logo">
+    <img src="assets/icon/favicon.png" style="width:100px;" alt="Ionic logo" />
+  </div> 
+  <ion-card class="ion-padding">
+    <ion-list>
+      <ion-item>
+        <ion-icon class="login-icon" color="primary" icon="person-circle-outline" slot="start" ></ion-icon>
+        <ion-label position="floating" color="primary">Fullname</ion-label>
+        <ion-input name="fullname" [(ngModel)]="fullname" type="text" spellcheck="false" autocapitalize="off" required></ion-input> 
+      </ion-item>
+      <ion-item>
+        <ion-icon class="login-icon" color="primary" icon="mail" slot="start" ></ion-icon>
+        <ion-label position="floating" color="primary">Email Address</ion-label>
+        <ion-input name="email" [(ngModel)]="email" type="email" spellcheck="false" autocapitalize="off" required ></ion-input> 
+      </ion-item>
+      <ion-item>
+        <ion-icon class="login-icon" color="primary" icon="lock-closed" slot="start"></ion-icon>
+        <ion-label position="floating" color="primary">Password</ion-label>
+        <ion-input name ="password" [(ngModel)]="password" type="password"  spellcheck="false" autocapitalize="off" required ></ion-input> 
+      </ion-item>
+  
+      <ion-item>
+        <ion-checkbox slot="start" name="accepted" value="" color="primary">
+        </ion-checkbox>
+        <ion-label color="secondary">Accept Terms & Privacy</ion-label>
+
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" (click)="register()" expand="block">Sign Up</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <hr />
+        </ion-col>
+        <ion-col class="or">
+          or signup with
+        </ion-col>
+        <ion-col>
+          <hr />
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="socialicon">
+          <ion-button color="danger" class="logoGoogle">
+          <ion-icon icon="logo-google"></ion-icon>
+          </ion-button>
+          <ion-button color="primary" class="logoFacebook">
+          <ion-icon icon="logo-facebook"></ion-icon>
+          </ion-button>
+          <ion-button color="secondary" class="logoTwitter">
+          <ion-icon icon="logo-twitter"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-card> 
+  
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="login()"  color="light" expand="block">
+          I have Account ?
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

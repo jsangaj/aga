@@ -1,0 +1,57 @@
+#login-page, #signup-page, #support-page {
+    .login-logo {
+      padding: 40px 0;
+      min-height: 200px;
+      text-align: center;
+    }
+    
+    .login-logo img {
+      max-width: 150px;
+    }
+    
+    .list {
+      margin-bottom: 0;
+    }
+    .footer{
+      text-align: center;
+    }
+    .logcolor{
+      color: #220cec;
+      font-weight: 800;
+      font-style: normal;
+    }
+    .or{
+      text-align: center;
+      color: rgb(209, 11, 110);
+  
+    }
+    .socialicon{
+      text-align: center;
+      margin: auto;
+    }
+  
+  hr {
+    display: block;
+    height: 4px;
+    border: 0;
+    border-top: 1px solid rgb(209, 11, 110);
+    margin: 0.5em 0;
+    padding: 0;
+  }
+  .logoGoogle{
+    background-color: red !important;
+    border-radius: 25% !important;
+  }
+  .logoFacebook{
+    background-color: blue !important;
+    border-radius: 25%;
+  }
+  .logoTwitter{
+    background-color: #3dc2ff !important;
+    border-radius: 25%;
+  }
+  .loader{
+    --background: rgba(255,255,255,0.5);
+  }
+    
+  }
