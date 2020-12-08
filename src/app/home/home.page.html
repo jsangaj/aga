@@ -2,33 +2,87 @@
 
 <ion-content [fullscreen]="true">
 
-<!-- Header with user deatails -->
-    <ion-content>
-     <ion-card>
-       <ion-card-header>
-         <ion-card-tittle  >
-           User Dashboard
-         </ion-card-tittle>
-       </ion-card-header>
+   <ion-toolbar style="padding-top:20px;">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><h6 style="font-weight: bolder; padding-left: 10px;">AGA</h6></ion-title>
+  </ion-toolbar>
 
-       <ion-card-content>
-         <ion-grid>
-           <ion-row>
-             <ion-col size="4">
-                <ion-avatar>
-                 <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-               </ion-avatar> 
-             </ion-col>
-             <ion-col aria="8">
-              <ion-iterm>
-                <ion-label style="margin-left: 25px;">
-                  {{fullname}}
-                </ion-label>
-              </ion-iterm>
-             </ion-col>
-           </ion-row>
-         </ion-grid>
-       </ion-card-content>
-     </ion-card>
-    </ion-content>
+<!-- User Dashboard -->
+
+         <!-- <ion-header style="padding-top: 30px; padding-left: 30px; font-weight: bolder;" >User Dashboard</ion-header>
+       
+       <ion-card class="color" style="margin: 0px;">
+          <ion-item style="padding-top: -10px;">
+          <ion-button slot="end" style="padding-top: 0px; width: 50px; height: 20px; color: rgb(206, 55, 55);" (click)="logout()"><p>Logout</p></ion-button>
+            <ion-avatar slot="start">
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-avatar>
+          <ion-label style="padding-top:20px;">
+            <h2>{{ fullname }}</h2>
+            <p>Home</p>
+          </ion-label>
+    </ion-item>
+       </ion-card> -->
+   
+       <ion-header style="padding-top: 10px; padding-left: 30px; font-weight: bolder;" >My courses</ion-header>
+       
+       <ion-card class="color"  style="margin: 0px;">
+          <ion-item style="padding-top: -10px;">
+            <ion-badge slot="end" color="worning"><h2 style="font-weight: bolder;">20</h2></ion-badge>
+            <ion-icon style="width: 60px; height: 60px;" slot="start" name="book-outline"></ion-icon>
+          <ion-label style="padding-top:20px;">
+            <h2>Courses</h2>
+            <p></p>
+          </ion-label>
+         </ion-item>
+       </ion-card>
+
+       <ion-header style="padding-top: 30px; padding-left: 30px; font-weight: bolder;" >Favarites</ion-header>
+       <ion-card style="margin: 0px;">
+          <ion-item style="padding-top: -10px;">
+            <!-- <ion-badge slot="end" color="worning"><h2 style="font-weight: bolder;">20</h2></ion-badge> -->
+            <ion-icon style="width: 60px; height: 60px;" slot="start" name="heart-outline"></ion-icon>
+          <ion-label style="padding-top:20px;">
+            <h1>Courses</h1>
+            <h1 style="font-weight:bolder">10</h1>
+          </ion-label>
+         </ion-item>
+       </ion-card>
+
+       <ion-header style="padding-top: 30px; padding-left: 30px; font-weight: bolder;" >My Courses List</ion-header>
+       <ion-card  style="margin: 10px;">
+        <ion-list class="color">
+          <ion-item>
+            <ion-icon slot="start" name="arrow-dropright-circle"></ion-icon>
+            <ion-label>BAED</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>ICT</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>COMPUTER</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>PROGRAMING</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-button style="width: 60px; height: 15px;" (click)="Admin()" >Admin</ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button style="width: 70px; height: 15px;" (click)="Teacher()" >Teacher</ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button style="width: 70px; height: 15px;">Student</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+       </ion-card>
+
 </ion-content>

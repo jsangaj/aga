@@ -8,6 +8,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { UserService } from './services/auth.service';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -16,6 +18,7 @@ import { UserService } from './services/auth.service';
 export class AppComponent {
   fullname:  string = "";
   email:  string = "";
+  menu: any;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -26,7 +29,10 @@ export class AppComponent {
     public router: Router
   ) {
     this.initializeApp();
+    
   }
+
+  
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -60,4 +66,41 @@ export class AppComponent {
     }
     return;
   });
+
+  currentPageTitle = 'Dashboard';
+
+  appPages = [
+    {
+      title: 'Dashboard',
+      url: '',
+      icon: 'easel'
+    },
+    {
+      title: 'College',
+      url: '/college',
+      icon: 'school'
+    },
+    {
+      title: 'A-level',
+      url: '/alevel',
+      icon: 'school'
+    },
+    {
+      title: 'O-level',
+      url: '/olevel',
+      icon: 'school'
+    },
+    {
+      title: 'Primary',
+      url: '/primary',
+      icon: 'school'
+    },
+    {
+      title: 'Settings',
+      url: '/settings',
+      icon: 'settings'
+    }
+  ];
+
 }
+

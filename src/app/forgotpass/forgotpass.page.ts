@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forgotpass',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forgotpass.page.scss'],
 })
 export class ForgotpassPage implements OnInit {
+  
+    //  IMPORTING A-ROUTINGS
+  constructor(private router: Router) { }
 
-  constructor() { }
 
   ngOnInit() {
   }
-
+  login(){
+    this.router.navigate(["login"])
+  }
 }

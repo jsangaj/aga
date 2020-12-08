@@ -4,6 +4,7 @@ import { UserService } from 'src/app/services/auth.service';
 import { AngularFireAuth } from '@angular/fire/auth'
 import { AngularFirestore } from '@angular/fire/firestore'
 import { AlertController } from '@ionic/angular';
+import * as firebase from 'firebase';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class SignupPage implements OnInit {
     fullname: string = ""
     email: string = ""
     password: string =""
+    usertype: string =""
 
   constructor(
     public afAuth: AngularFireAuth,
@@ -46,10 +48,11 @@ export class SignupPage implements OnInit {
 
      try{
        const res = await this.afAuth.createUserWithEmailAndPassword(email, password)
-
+       const usertype = "student"
        this.afstore.doc(`users/${res.user.uid}`).set({
           email,
-          fullname,      
+          fullname,
+          usertype,      
        })
 
        this.user.setUser({
@@ -64,6 +67,46 @@ export class SignupPage implements OnInit {
        this.presentAlert(error, '')
      }
 
+}
+
+loginwithfacebook(){
+  const provider = new firebase.auth.FacebookAuthProvider();
+
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+      const token = result.credential;
+      // The signed-in user info.
+      const user = result.user;
+      // ...
+     
+
+      if(user){
+          const email=user.email;
+          const fullname = user.displayName
+
+          this.user.setUser({
+              email,
+              fullname,
+              uid: user.uid,
+          })
+          this.presentAlert('success', 'You are loged in')
+          this.router.navigate(['/home'])
+      }
+
+    }).catch(function(error) {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      const credential = error.credential;
+      // ...
+      console.log(errorCode, errorMessage,email, credential)
+    });
+    
+
+  
 }
 
 }

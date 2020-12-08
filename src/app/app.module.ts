@@ -13,6 +13,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UserService } from './services/auth.service';
+import { MenuController } from '@ionic/angular';
 
 @NgModule({
   declarations: [AppComponent],

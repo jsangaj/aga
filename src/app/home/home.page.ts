@@ -40,11 +40,19 @@ export class HomePage {
     }
     return;
   });
-
+   
+  // LOGOUT FUNCTION FOR ENDIND SESSION
   logout(){
     this.afAuth.signOut().then(() => {
         this.router.navigate(['/login'])
     })
+  }
+   Admin(){
+     this.router.navigate(["/admin"])
+   }
+
+   Teacher(){
+    this.router.navigate(["/teacher"])
   }
 
 }

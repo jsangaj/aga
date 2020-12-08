@@ -37,13 +37,13 @@
       </ion-row>
       <ion-row>
         <ion-col class="socialicon">
-          <ion-button color="danger" class="logoGoogle">
+          <ion-button (click)="loginwithgoogle()" color="danger" class="logoGoogle">
           <ion-icon icon="logo-google"></ion-icon>
           </ion-button>
-          <ion-button color="primary" class="logoFacebook">
+          <ion-button (click)="loginwithfacebook()" color="primary" class="logoFacebook">
           <ion-icon icon="logo-facebook"></ion-icon>
           </ion-button>
-          <ion-button color="secondary" class="logoTwitter">
+          <ion-button (click)="loginwithTwitter()"color="secondary" class="logoTwitter">
           <ion-icon icon="logo-twitter"></ion-icon>
           </ion-button>
         </ion-col>
