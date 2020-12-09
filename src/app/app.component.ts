@@ -71,6 +71,11 @@ export class AppComponent {
 
   appPages = [
     {
+      title: 'Become a Teacher',
+      url: '',
+      icon: 'easel'
+    },
+    {
       title: 'Dashboard',
       url: '',
       icon: 'easel'

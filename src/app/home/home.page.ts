@@ -51,8 +51,8 @@ export class HomePage {
      this.router.navigate(["/admin"])
    }
 
-   Teacher(){
-    this.router.navigate(["/teacher"])
+   bteacher(){
+    this.router.navigate(["/bteacher"])
   }
 
 }
